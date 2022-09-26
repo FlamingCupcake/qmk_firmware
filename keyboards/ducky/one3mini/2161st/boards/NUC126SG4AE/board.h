@@ -18,36 +18,36 @@
 #define BOARD_H
 
 /*
- * Setup for Generic NUC123 board.
+ * Setup for Generic NUC126 board.
  */
 
 /*
  * Board identifier.
  */
-#define BOARD_NUC123SD4AN0
-#define BOARD_NAME                  "Nuvoton NUC123SD4AN0 MCU"
+#define BOARD_NUC126SG4AE
+#define BOARD_NAME                  "Nuvoton NUC126SG4AE MCU"
 
 /*
  * Board oscillators-related settings.
  * NOTE: LSE not fitted.
  * NOTE: HSE is fitted.
  */
-#if !defined(NUC123_LSECLK)
-#define NUC123_LSECLK                0U
+#if !defined(NUC126_LSECLK)
+#define NUC126_LSECLK                0U
 #endif
 
-#define NUC123_LSEDRV                (3U << 3U)
+#define NUC126_LSEDRV                (3U << 3U)
 
-#if !defined(NUC123_HSECLK)
-#define NUC123_HSECLK                12000000U
+#if !defined(NUC126_HSECLK)
+#define NUC126_HSECLK                12000000U
 #endif
 
-//#define NUC123_HSE_BYPASS
+//#define NUC126_HSE_BYPASS
 
 /*
- * MCU type as defined in the NUC123 header.
+ * MCU type as defined in the NUC126 header.
  */
-#define NUC123SD4AN0
+#define NUC126SG4AE
 
 /*
  * GPIO Multi Function Pin USB Setup
@@ -177,7 +177,7 @@
 /*
  * I/O ports initial setup, this configuration is established soon after reset
  * in the initialization code.
- * Please refer to the NUC123 Reference Manual for details.
+ * Please refer to the NUC126 Reference Manual for details.
  */
 #define PIN_MODE_INPUT(n)             (0U << ((n) * 2U))
 #define PIN_MODE_OUTPUT(n)            (1U << ((n) * 2U))

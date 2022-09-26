@@ -23,19 +23,19 @@
  *          This variable is used by the HAL when initializing the PAL driver.
  */
 const PALConfig pal_default_config = {
-#    if NUC123_HAS_GPIOA
+#    if NUC126_HAS_GPIOA
     {VAL_GPIOA_PMD, VAL_GPIOA_OFFD, VAL_GPIOA_DMASK, VAL_GPIOA_DBEN, VAL_GPIOA_IMD, VAL_GPIOA_IEN, VAL_GPIOA_ISRC, VAL_GPIOA_DOUT},
 #    endif
-#    if NUC123_HAS_GPIOB
+#    if NUC126_HAS_GPIOB
     {VAL_GPIOB_PMD, VAL_GPIOB_OFFD, VAL_GPIOB_DMASK, VAL_GPIOB_DBEN, VAL_GPIOB_IMD, VAL_GPIOB_IEN, VAL_GPIOB_ISRC, VAL_GPIOB_DOUT},
 #    endif
-#    if NUC123_HAS_GPIOC
+#    if NUC126_HAS_GPIOC
     {VAL_GPIOC_PMD, VAL_GPIOC_OFFD, VAL_GPIOC_DMASK, VAL_GPIOC_DBEN, VAL_GPIOC_IMD, VAL_GPIOC_IEN, VAL_GPIOC_ISRC, VAL_GPIOC_DOUT},
 #    endif
-#    if NUC123_HAS_GPIOD
+#    if NUC126_HAS_GPIOD
     {VAL_GPIOD_PMD, VAL_GPIOD_OFFD, VAL_GPIOD_DMASK, VAL_GPIOD_DBEN, VAL_GPIOD_IMD, VAL_GPIOD_IEN, VAL_GPIOD_ISRC, VAL_GPIOD_DOUT},
 #    endif
-#    if NUC123_HAS_GPIOF
+#    if NUC126_HAS_GPIOF
     {VAL_GPIOF_PMD, VAL_GPIOF_OFFD, VAL_GPIOF_DMASK, VAL_GPIOF_DBEN, VAL_GPIOF_IMD, VAL_GPIOF_IEN, VAL_GPIOF_ISRC, VAL_GPIOF_DOUT},
 #    endif
 };
@@ -47,7 +47,7 @@ const PALConfig pal_default_config = {
  *          and before any other initialization.
  */
 void __early_init(void) {
-    NUC123_clock_init();
+    NUC126_clock_init();
 }
 
 /**
